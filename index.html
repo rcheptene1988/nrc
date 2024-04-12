@@ -40,7 +40,7 @@
                 </li>
             </ul>
         </div>
-        <div class="row v-center" style="margin-top: 35px;">
+        <div class="row v-center main-menu">
             <div class="header-item item-left">
                 <div class="logo">
                     <a href="#" class="logo"> <img id="nrc_logo" src="img/nrc-logo.png" alt="NRC Logo"> </a>
@@ -51,7 +51,11 @@
                 <div class="menu-overlay">
                 </div>
                 <nav class="menu">
+                    <div class="mobile-menu-logo">
+                        <a href="#" class="logo"> <img id="" src="img/nrc-logo-blue.png" alt="NRC Logo"> </a>
+                    </div>
                     <div class="mobile-menu-head">
+                        
                         <div class="go-back"><i class="fa fa-angle-left"></i></div>
                         <div class="current-menu-title"></div>
                         <div class="mobile-menu-close">&times;</div>
@@ -59,7 +63,7 @@
                     <ul class="menu-main">
                         <!-- Courses -->
                         <li class="menu-item-has-children">
-                            <a href="#">Courses <i class="fa fa-angle-down hiddenDesktop"></i></a>
+                            <a href="#">Courses <i class="fa fa-plus hiddenDesktop"></i></a>
                             <div class="sub-menu mega-menu mega-menu-column-4">
                               <div class="list-item">
                                     <h4 class="title">Course Type</h4>
@@ -98,16 +102,22 @@
                                          <li><a href="#">Enrolment 2024</a></li>
                                     </ul>
                               </div>
-                              <div class="list-item">
+                              <div class="list-item hiddenMobile">
                                 <h4 class="title">Advanced Course Search</h4>
                                 <img src="img/phone-search.jpg" alt="search">
+                              </div>
+                              <div class="list-item hiddenDesktop">
+                                <ul class="advanced-search dflex">
+                                    <li><a href="#"><h4>Advanced Search</h4></a></li>
+                                    <li> <a href="#"><img src="/img/arrow-right-blueBg.jpg" alt="click here" width="40"></a></li>
+                                </ul>
                               </div>
                             </div>
                         </li>
 
                         <!-- College Life -->
                         <li class="menu-item-has-children">
-                            <a href="#">College life <i class="fa fa-angle-down hiddenDesktop"></i></a>
+                            <a href="#">College life <i class="fa fa-plus hiddenDesktop"></i></a>
                             <div class="sub-menu mega-menu mega-menu-column-4">
                               <div class="list-item">
                                     <h4 class="title">About Us</h4>
@@ -154,7 +164,7 @@
 
                         <!-- Business Support -->
                         <li class="menu-item-has-children">
-                            <a href="#">Business support <i class="fa fa-angle-down hiddenDesktop"></i></a>
+                            <a href="#">Business support <i class="fa fa-plus hiddenDesktop"></i></a>
                             <div class="sub-menu mega-menu mega-menu-column-4">
                               <div class="list-item">
                                     <h4 class="title">About Us</h4>
@@ -186,6 +196,13 @@
                             </div>
                         </li>
 
+                        <li class="hiddenDesktop">
+                            <ul>
+                                <li class="top-menu-item-mobile"><a href="#">Application login</a></li>
+                                <li class="top-menu-item-mobile"><a href="#">Student login</a></li>
+                                <li class="top-menu-item-mobile"> <a href="#">Course basket <span class="numberCircle">3</span></a></li>
+                            </ul>
+                        </li>
 
                     </ul>
                 </nav>
@@ -207,7 +224,7 @@
 <section class="home" id="home">
     <div class="slides-container">
 
-        <div class="slide slider-img active" style="background-image: url(img/header-banner-triangles.jpg);">
+        <div class="slide slider-img active" style="background-image: url(img/header-banner-1.jpg);">
             <div class="content">
               <div></div>
               <div>  
@@ -218,11 +235,22 @@
         </div>
         </div>
 
-        <div class="slide slider-img" style="background-image: url(img/header-banner-with-triangles-2.jpg);">
+        <div class="slide slider-img" style="background-image: url(img/header-banner-2.jpg);">
             <div class="content">
               <div></div>
               <div>  
-                <h2>Go further. Go higher.</h2>
+                <h2>Traineeships</h2>
+                <p>Explore the wonders of the cosmos at a festive Lates evening with Imperial space scientists.</p>
+                <a href="#" class=""><img src="/img/arrow-right-blueBg.jpg" width="50" alt="see more"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide slider-img" style="background-image: url(img/header-banner-3.jpg);">
+            <div class="content">
+              <div></div>
+              <div>  
+                <h2>Further Education.</h2>
                 <p>Explore the wonders of the cosmos at a festive Lates evening with Imperial space scientists.</p>
                 <a href="#" class=""><img src="/img/arrow-right-blueBg.jpg" width="50" alt="see more"></a>
             </div>
@@ -289,25 +317,31 @@
                   </div>
             </div>
             <div class="rightColumnEq">
+                <div class="wrapper">
                 <p>Apprentships</p>
                 <form>
                     <input class="searchFieldBlue" type="text" name="search" placeholder="Subject List">
                     <input class="submitBtn" type="image" src="/img/submit-arrow-blue.png" border="0" alt="Submit" />
                 </form>
+                </div>
             </div>
             <div class="rightColumnEq">
+                <div class="wrapper">
                 <p>Higher Education</p>
                 <form>
                     <input class="searchFieldBlue" type="text" name="search" placeholder="Subject List">
                     <input class="submitBtn" type="image" src="/img/submit-arrow-blue.png" border="0" alt="Submit" />
                 </form>
+                </div>
             </div>
             <div class="rightColumnEq">
+                <div class="wrapper">
                 <p>Further Education</p>
                 <form>
                     <input class="searchFieldBlue" type="text" name="search" placeholder="Subject List">
                     <input class="submitBtn" type="image" src="/img/submit-arrow-blue.png" border="0" alt="Submit" />
                 </form>
+                </div>
             </div>
         </div>
 
@@ -497,7 +531,15 @@
   </div>
 
     <!-- END News Slider -->
-
+    <div class="all-news-wrapper">
+    <ul class="all-news">
+        <li>
+            <a href="#"><h4>All news and updates</h4></a>
+           
+        </li>
+        <li> <a href="#"><img src="/img/arrow-right-blueBg.jpg" alt="click here" width="40"></a></li>
+    </ul>
+    </div>
 
 </section>
 
@@ -614,37 +656,50 @@
         </div>
         <div class="column">
             <h4>Corporate</h4>
-            <ul>
-                <li>Strategic Plan</li>
-                <li>Senior Management Team</li>
-                <li>Governance</li>
-                <li>Equality</li>
-                <li>News</li>
-                <li>Awards and Accreditation</li>
-                <li>Social Media Icons</li>
-                <li>Facebook Messenger Icon</li>
+            <ul class="footer-links">
+                <li><a href="#"> Plan</a></li>
+                <li><a href="#">Senior Management Team</a></li>
+                <li><a href="#">Governance</a></li>
+                <li><a href="#">Equality</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Awards and Accreditation</a></li>
+                <li><a href="#">Social Media Icons</a></li>
+                <li><a href="#">Facebook Messenger Icon</a></li>
             </ul>
         </div>
         <div class="column">
             <h4>Privacy & Legal</h4>
-            <ul>
-                <li>Data Protection</li>
-                <li>Cookie Policy</li>
-                <li>Freedom of Information</li>
-                <li>Raising Concerns</li>
+            <ul class="footer-links">
+                <li><a href="#">Data Protection</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">Freedom of Informatio</a></li>
+                <li><a href="#">Raising Concerns</a></li>
             </ul>
         </div>
         <div class="column">
             <h4>Contact Us</h4>
-            <ul>
-                <li>Accessibility</li>
-                <li>AccessAble</li>
-                <li>Quick Links</li>
-                <li>Applicant Login</li>
-                <li>Student Login</li>
-                <li>Staff Login</li>
+            <ul class="footer-links">
+                <li><a href="#">Accessibility</a></li>
+                <li><a href="#">AccessAble</a></li>
+                <li><a href="#">Quick Links</a></li>
+                <li><a href="#">Applicant Login</a></li>
+                <li><a href="#">Student Login</a></li>
+                <li><a href="#">Staff Login</a></li>
             </ul>
         </div>
+    </div>
+    <div class="scrollTop" style="position: absolute; bottom: 0">
+        <a href="#" onclick="window.scrollTo({top: 0, behaviour: 'smooth'});">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="45" viewBox="0 0 45 62">
+            <g id="Group_107" data-name="Group 107" transform="translate(-1099 1700) rotate(-90)">
+              <rect id="Rectangle_42" data-name="Rectangle 42" width="62" height="45" transform="translate(1638 1099)" fill="#fff"/>
+              <g id="Group_31" data-name="Group 31" transform="translate(1649.079 1112.598)">
+                <path id="Path_1" data-name="Path 1" d="M211.349,63.317l-.68-.681L218.81,54.5l-8.136-8.136.68-.681,8.817,8.817Z" transform="translate(-179.847 -45.679)" fill="#57c8ef"/>
+                <rect id="Rectangle_5" data-name="Rectangle 5" width="39.643" height="0.962" transform="translate(0 8.335)" fill="#57c8ef"/>
+              </g>
+            </g>
+          </svg>
+        </a>
     </div>
 </section>
 
