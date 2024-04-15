@@ -164,3 +164,27 @@ function prev(){
 
 
 
+
+// Accordion footer
+var accFooter = document.getElementsByClassName("accordionFooter");
+var i;
+
+for (i = 0; i < accFooter.length; i++) {
+  accFooter[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    var iTag = this.getElementsByTagName('i');
+
+    if (panel.style.display === "block") {
+      
+      panel.style.display = "none";
+      iTag[0].classList.remove('fa-minus');
+      iTag[0].classList.add('fa-plus');
+    } else {
+      panel.style.display = "block";
+      iTag[0].classList.remove('fa-plus');
+      iTag[0].classList.add('fa-minus');
+    }
+  });
+}
+// END Accordion footer
