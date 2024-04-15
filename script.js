@@ -87,6 +87,35 @@ for (i = 0; i < accordion.length; i++) {
   });
 }
 
+
+
+// Accordion footer
+var accFooter = document.getElementsByClassName("accordionFooter");
+var i;
+
+for (i = 0; i < accFooter.length; i++) {
+  accFooter[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    var iTag = this.getElementsByTagName('i');
+
+    if (panel.style.display === "block") {
+      
+      panel.style.display = "none";
+      iTag[0].classList.remove('fa-minus');
+      iTag[0].classList.add('fa-plus');
+    } else {
+      panel.style.display = "block";
+      iTag[0].classList.remove('fa-plus');
+      iTag[0].classList.add('fa-minus');
+    }
+  });
+}
+// END Accordion footer
+
+
+
+
 }
 
 window.onresize = function(){
@@ -102,6 +131,7 @@ window.onresize = function(){
     }
 }
 // END New Mobile Menu
+
 
 
 
@@ -157,34 +187,47 @@ function prev(){
           progressContent.textContent = `${Math.ceil(time / 1000)}s`;
         }
       }
-    });
+   });
 
 
 //  END News Slider
 
 
+// Cookie banner
+var modal = document.getElementById("ccc");
+var acceptBtn = document.getElementById("ccc-recommended-settings");
+var btn = document.getElementById("changeSettings");
+var cookieWrapperCloseMobile = document.getElementsByClassName("cookie-wrapper")[0];
+var manageCookies = document.getElementById("manageCookies");
 
+var close = document.getElementById("ccc-dismiss-button");
 
-// Accordion footer
-var accFooter = document.getElementsByClassName("accordionFooter");
-var i;
-
-for (i = 0; i < accFooter.length; i++) {
-  accFooter[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    var iTag = this.getElementsByTagName('i');
-
-    if (panel.style.display === "block") {
-      
-      panel.style.display = "none";
-      iTag[0].classList.remove('fa-minus');
-      iTag[0].classList.add('fa-plus');
-    } else {
-      panel.style.display = "block";
-      iTag[0].classList.remove('fa-plus');
-      iTag[0].classList.add('fa-minus');
-    }
-  });
+btn.onclick = function() {
+  modal.style.display = "block";
 }
-// END Accordion footer
+manageCookies.onclick = function() {
+  modal.style.display = "block";
+}
+
+close.onclick = function() {
+  modal.style.display = "none";
+  cookieWrapperCloseMobile.style.display = "none";
+  manageCookies.style.display = "block";
+}
+
+acceptBtn.onclick = function() {
+  modal.style.display = "none";
+  cookieWrapperCloseMobile.style.display = "none"; 
+  manageCookies.style.display = "block";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+// END Cookie banner
+
+
+
